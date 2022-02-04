@@ -1,0 +1,25 @@
+#!/bin/bash
+
+EDITOR="alacritty -e nvim"
+
+declare -a options=(
+"alacritty - $HOME/.config/alacritty/alacritty.yml"
+"bash - $HOME/.bashrc"
+"neovim - $HOME/.config/nvim/init.vim"
+"qtile - $HOME/.config/qtile/config.py"
+"quit"
+)
+
+choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 20 -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14' -p "Edit config:")
+
+if [[ "$choice" == "quit" ]]; then
+    echo "Program terminated" && exit 1
+
+elif [ "$choice" ]; then
+    # The file is in the last column
+    file=$(printf '%s\n' "${choice}" | awk '{print $NF}')
+    $EDITOR "$file"
+
+else
+    echo "Program terminated" && exit 1
+fi
