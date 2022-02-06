@@ -7,6 +7,7 @@ declare -a options=(
 "bash - $HOME/.bashrc"
 "neovim - $HOME/.config/nvim/init.vim"
 "qtile - $HOME/.config/qtile/config.py"
+"sxhkd - $HOME/.config/qtile/sxhkd/sxhkdrc"
 "quit"
 )
 
