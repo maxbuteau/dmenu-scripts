@@ -5,6 +5,7 @@ EDITOR="alacritty -e nvim"
 declare -a options=(
 "alacritty - $HOME/.config/alacritty/alacritty.yml"
 "bash - $HOME/.bashrc"
+"conky - $HOME/.config/qtile/scripts/system-overview"
 "neovim - $HOME/.config/nvim/init.vim"
 "qtile - $HOME/.config/qtile/config.py"
 "sxhkd - $HOME/.config/qtile/sxhkd/sxhkdrc"
